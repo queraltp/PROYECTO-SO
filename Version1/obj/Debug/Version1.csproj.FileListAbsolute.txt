@@ -1,0 +1,12 @@
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\bin\Debug\Version1.exe.config
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\bin\Debug\Version1.exe
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\bin\Debug\Version1.pdb
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.csproj.AssemblyReference.cache
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.Registro.resources
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.IniciarSesion.resources
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.Properties.Resources.resources
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.csproj.GenerateResource.cache
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.csproj.CoreCompileInputs.cache
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.exe
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.pdb
+C:\Users\crisb\Desktop\SO\PROYECTO_SO\Version1\Version1\obj\Debug\Version1.Consultas_BD.resources
