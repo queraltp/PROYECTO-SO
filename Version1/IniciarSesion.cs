@@ -16,7 +16,6 @@ namespace Version1
     public partial class IniciarSesion : Form
     {
         Socket server;
-        string usuario, contraseña;
         public IniciarSesion()
         {
             InitializeComponent();
@@ -25,14 +24,14 @@ namespace Version1
         {
             //Creamos un IDEndPoint con el IP y puerto del servidor
             IPAddress direc = IPAddress.Parse("192.168.56.102");
-            IPEndPoint ipep = new IPEndPoint(direc, 9030);
+            IPEndPoint ipep = new IPEndPoint(direc, 9190);
 
             //Creamos el socket
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
                 server.Connect(ipep); //Intentamos conectar el socket
-                MessageBox.Show("Conectado");
+                MessageBox.Show("Se ha establecido conexión con el servidor");
             }
             catch (SocketException exc)
             {
@@ -56,19 +55,27 @@ namespace Version1
             string[] trozos = mensaje.Split('/');
             //int codigo = Convert.ToInt32(trozos[0]);
 
-            MessageBox.Show("bienvenid@ ");
-
             if (trozos[1] == "INCORRECTO")
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrecta.");
             }
-            Consultas_BD f2 = new Consultas_BD();
-            f2.ShowDialog();
+            else
+            {
+                Consultas_BD f2 = new Consultas_BD(server);
+                f2.ShowDialog();
+            }
+               
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void registro_Click(object sender, EventArgs e)
         {
-            Registro f1 = new Registro();
+            //Hay que mandar el socket server al otro formulario
+            Registro f1 = new Registro(server);
             f1.ShowDialog();
         }
 

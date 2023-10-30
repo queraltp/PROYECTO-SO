@@ -15,10 +15,11 @@ namespace Version1
     public partial class Registro : Form
     {
         Socket server;
-        string usuario, contraseña, repeticion_contraseña;
-        public Registro()
+        
+        public Registro(Socket server)
         {
             InitializeComponent();
+            this.server = server;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,14 +29,14 @@ namespace Version1
 
         private void Aceptar_Click(object sender, EventArgs e)
         {
-            string mensaje = "/" + usuarioIn.Text + "/" + contraseñaIn.Text;
+            string mensaje = "2/" + usuarioIn.Text + "/" + contraseñaIn.Text;
             // Enviamos al servidor el nombre tecleado
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-            server.Send(msg);
+            this.server.Send(msg);
 
             //Recibimos la respuesta del servidor
             byte[] msg2 = new byte[80];
-            server.Receive(msg2);
+            this.server.Receive(msg2);
             mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
             if(mensaje == "SI")
             {

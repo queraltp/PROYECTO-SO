@@ -36,6 +36,12 @@ namespace Version1
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -100,17 +106,71 @@ namespace Version1
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(183, 255);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(456, 24);
+            this.radioButton1.Size = new System.Drawing.Size(502, 24);
             this.radioButton1.TabIndex = 13;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Consulta 2: Dime qué jugador ha conseguido menos puntos\r\n";
+            this.radioButton1.Text = "Consulta 2: Dime qué jugador ha realizado una partida el día 20/09";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(568, 366);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 41);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Desconectarme";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(46, 141);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 113);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "¿Cuantos servicios llevo?";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "label3";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(242, 366);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(238, 44);
+            this.button4.TabIndex = 25;
+            this.button4.Text = "Mostrar Lista de Conectados";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(720, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(490, 255);
+            this.dataGridView1.TabIndex = 26;
             // 
             // Consultas_BD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1258, 499);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.label2);
@@ -121,6 +181,7 @@ namespace Version1
             this.Name = "Consultas_BD";
             this.Text = "CONSULTAS";
             this.Load += new System.EventHandler(this.Consultas_BD_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +195,10 @@ namespace Version1
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
